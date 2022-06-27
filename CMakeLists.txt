@@ -6,6 +6,8 @@ set (CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
 add_subdirectory(src)
 include_directories(inc)
 
+cma
+
 add_executable(${PROJECT_NAME} src/main.cpp)
 
 add_library(
