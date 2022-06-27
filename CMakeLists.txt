@@ -6,7 +6,11 @@ set (CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
 add_subdirectory(src)
 include_directories(inc)
 
-cma
+find_package(wxWidgets COMPONENTS gl core base OPTIONAL_COMPONENTS net)
+if(wxWidgets_FOUND)
+  include(${wxWidgets_USE_FILE})
+  # and for each of your dependent executable/library targets:
+endif()
 
 add_executable(${PROJECT_NAME} src/main.cpp)
 
@@ -17,4 +21,5 @@ add_library(
 )
 
 target_link_libraries(${PROJECT_NAME} 
+    ${wxWidgets_LIBRARIES}
     generic)
