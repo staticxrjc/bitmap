@@ -1,10 +1,10 @@
-#include <generic.h>
+#include <bmp.h>
 #include <iostream>
 
-generic::generic() {
+bmp::bmp() {
     std::cout << "Generic Created!" << std::endl;
 }
 
-generic::~generic() {
+bmp::~bmp() {
     std::cout << "Generic Deleted!" << std::endl;
 }
